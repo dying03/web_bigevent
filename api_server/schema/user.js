@@ -37,7 +37,7 @@ exports.reg_login_schema = {
 
 //验证规则对象- 更新用户基本信息
 exports.update_userinfo_schema = {
-    body:{
+    body: {
         id,
         nickname,
         email
@@ -46,7 +46,7 @@ exports.update_userinfo_schema = {
 
 //验证规则对象- 重置密码
 exports.update_password_schema = {
-    body:{
+    body: {
         //使用password这个规则，验证req.body.oldPwd的值
         oldPwd: password,
         //使用Joi.not(joi.ref('oldPwd')).concat(password)规则，验证req.body.newPwd的值
@@ -60,7 +60,7 @@ exports.update_password_schema = {
 
 //验证规则对象- 更新头像
 exports.update_avatar_schema = {
-    body:{
+    body: {
         avatar
     }
 }
